@@ -1,0 +1,4 @@
+Loading MNIST from data/train-images-idx3-ubyte.gz
+Loaded 5000 images of size 28x28
+Processing complete.
+Artifacts written to: output

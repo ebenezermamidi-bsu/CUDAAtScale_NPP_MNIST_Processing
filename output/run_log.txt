@@ -1,0 +1,10 @@
+MNIST NPP processing complete
+Images processed: 5000
+Image size: 28x28
+Saved samples: 8
+First image stats:
+  mean_input=35.1084
+  mean_blur=34.9298
+  mean_edge=92.4031
+  max_edge=255.0000
+  strong_edge_pixels=293

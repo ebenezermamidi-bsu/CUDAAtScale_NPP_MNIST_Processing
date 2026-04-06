@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "CUDAAtScaleOCRPreProcessing",
+			"path": "CUDAAtScaleOCRPreProcessing"
+		}
+	],
+	"settings": {}
+}
