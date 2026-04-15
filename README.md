@@ -82,20 +82,91 @@ This project uses both:
 
 ---
 
-## Build
+## System Prerequisites
 
-    make
+This project was developed and tested on the following setup:
+
+### Hardware
+- NVIDIA GPU (Tested on RTX 4070 Laptop GPU)
+
+### Operating System
+- Windows 11 with WSL2 (Ubuntu 22.04)
+
+### Software Requirements
+
+#### NVIDIA Drivers
+Install latest NVIDIA drivers (Windows side)
+
+Verify:
+```
+nvidia-smi
+```
+
+#### CUDA Toolkit (inside WSL)
+Install CUDA Toolkit for Linux (inside Ubuntu)
+
+Verify:
+```
+nvcc --version
+```
+
+#### Build Tools
+```
+sudo apt update
+sudo apt install -y build-essential make
+```
+
+#### Required Libraries
+```
+sudo apt install -y zlib1g-dev
+```
 
 ---
 
-## Run
+## Quick Setup Script
 
-    bash scripts/download_mnist.sh
-    bash run.sh
+You can run the following commands to set up everything:
 
-Manual run:
+```
+# Update system
+sudo apt update
 
-    ./mnist_npp --images data/train-images-idx3-ubyte.gz --count 5000 --output-dir output
+# Install build tools
+sudo apt install -y build-essential make
+
+# Install zlib
+sudo apt install -y zlib1g-dev
+
+# Set CUDA paths (if not already set)
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+```
+
+---
+
+## Run the Project
+
+```
+# Download dataset
+bash scripts/download_mnist.sh
+
+# Build
+make
+
+# Run
+bash run.sh
+
+# Manual run
+./mnist_npp --images data/train-images-idx3-ubyte.gz --count 5000 --output-dir output
+```
+
+---
+
+## Example run
+
+    Loaded 5000 images of size 28x28
+    Processing complete.
+    Artifacts written to: output
 
 ---
 
@@ -112,23 +183,19 @@ After running, the output/ directory contains:
 
 ---
 
-## Example run
+## Proof of code execution
 
-    Loaded 5000 images of size 28x28
-    Processing complete.
-    Artifacts written to: output
+- CSV output - https://github.com/ebenezermamidi-bsu/CUDAAtScale_NPP_MNIST_Processing/blob/main/output/image_stats.csv
+- logs
+   - Execution https://github.com/ebenezermamidi-bsu/CUDAAtScale_NPP_MNIST_Processing/blob/main/output/execution.log
+   - Run https://github.com/ebenezermamidi-bsu/CUDAAtScale_NPP_MNIST_Processing/blob/main/output/run_log.txt
+- sample images
 
----
+   | Input | Blur | Edge |
+   |------|------|------|
+   | ![](output/sample_0_input.pgm) | ![](output/sample_0_blur.pgm) | ![](output/sample_0_edge.pgm) |
+   | ![](output/sample_1_input.pgm) | ![](output/sample_1_blur.pgm) | ![](output/sample_1_edge.pgm) |
+   | ![](output/sample_2_input.pgm) | ![](output/sample_2_blur.pgm) | ![](output/sample_2_edge.pgm) |
+- terminal window and output directory screenshot
+   - <img width="1626" height="965" alt="Screenshot 2026-04-06 002303" src="https://github.com/user-attachments/assets/e1be3b92-2c7b-4b20-853d-c0bfd5dc3ffb" />
 
-## Lessons learned
-
-Setting up CUDA, WSL, and NPP required careful configuration. Adapting to newer NPP APIs and ensuring compatibility between toolkit and driver was also a key learning.
-
----
-
-## Suggested proof
-
-- CSV output  
-- logs  
-- sample images  
-- terminal screenshot  
