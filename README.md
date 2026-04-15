@@ -193,9 +193,15 @@ After running, the output/ directory contains:
 
    | Input | Blur | Edge |
    |------|------|------|
-   | ![](output/sample_0_input.pgm) | ![](output/sample_0_blur.pgm) | ![](output/sample_0_edge.pgm) |
-   | ![](output/sample_1_input.pgm) | ![](output/sample_1_blur.pgm) | ![](output/sample_1_edge.pgm) |
-   | ![](output/sample_2_input.pgm) | ![](output/sample_2_blur.pgm) | ![](output/sample_2_edge.pgm) |
+   | ![](output/sample_0_input.png) | ![](output/sample_0_blur.png) | ![](output/sample_0_edge.png) |
+   | ![](output/sample_1_input.png) | ![](output/sample_1_blur.png) | ![](output/sample_1_edge.png) |
+   | ![](output/sample_2_input.png) | ![](output/sample_2_blur.png) | ![](output/sample_2_edge.png) |
+   | ![](output/sample_3_input.png) | ![](output/sample_3_blur.png) | ![](output/sample_3_edge.png) |
+   | ![](output/sample_4_input.png) | ![](output/sample_4_blur.png) | ![](output/sample_4_edge.png) |
+   | ![](output/sample_5_input.png) | ![](output/sample_5_blur.png) | ![](output/sample_5_edge.png) |
+   | ![](output/sample_6_input.png) | ![](output/sample_6_blur.png) | ![](output/sample_6_edge.png) |
+   | ![](output/sample_7_input.png) | ![](output/sample_7_blur.png) | ![](output/sample_7_edge.png) |    
 - terminal window and output directory screenshot
-   - <img width="1626" height="965" alt="Screenshot 2026-04-06 002303" src="https://github.com/user-attachments/assets/e1be3b92-2c7b-4b20-853d-c0bfd5dc3ffb" />
+  
+  <img width="1626" height="965" alt="Screenshot 2026-04-06 002303" src="https://github.com/user-attachments/assets/e1be3b92-2c7b-4b20-853d-c0bfd5dc3ffb" />
 
