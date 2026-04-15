@@ -11,7 +11,7 @@ fi
 
 make
 
-./mnist_npp \
+./bin/mnist_npp \
   --images data/train-images-idx3-ubyte.gz \
   --labels data/train-labels-idx1-ubyte.gz \
   --count 5000 \

@@ -157,7 +157,7 @@ make
 bash run.sh
 
 # Manual run
-./mnist_npp --images data/train-images-idx3-ubyte.gz --count 5000 --output-dir output
+./bin/mnist_npp --images data/train-images-idx3-ubyte.gz --count 5000 --output-dir output
 ```
 
 ---

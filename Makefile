@@ -1,7 +1,7 @@
 CUDA_HOME ?= /usr/local/cuda
 NVCC := $(CUDA_HOME)/bin/nvcc
 
-TARGET := mnist_npp
+TARGET := bin/mnist_npp
 SRC := src/main.cu
 
 NVCCFLAGS := -O3 -std=c++17 -arch=native -Xcompiler -Wall,-Wextra
